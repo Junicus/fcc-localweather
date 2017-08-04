@@ -1,0 +1,26 @@
+.daily-weather {
+    margin: 3px;
+    padding: 5px;
+    color: white;
+    box-shadow: 2px 2px 8px 0 rgba(0,0,0,.85);
+}
+
+.daily-weather-0 {
+    background-color: rgba(132,152,71, .85);
+}
+
+.daily-weather-1 {
+    background-color: rgba(122,81,108, .85);
+}
+
+.daily-weather-2 {
+    background-color: rgba(184, 130, 56, .85);
+}
+
+.daily-weather-3 {
+    background-color: rgba(167, 94, 74, .85);
+}
+
+.daily-weather-4 {
+    background-color: rgba(61, 93, 164, .85);
+}

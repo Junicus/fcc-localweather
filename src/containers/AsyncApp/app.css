@@ -1,0 +1,19 @@
+.app-outer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.app-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.app-weather-today {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
