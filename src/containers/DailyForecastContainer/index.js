@@ -14,7 +14,6 @@ class DailyForecastContainer extends React.Component {
     }
 
     render() {
-        console.log('render DailyForecastContainer', this.props);
         const { weather } = this.props;
 
         return (

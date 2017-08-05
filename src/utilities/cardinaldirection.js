@@ -1,5 +1,4 @@
 export function calculateCardinalDirection(angle) {
-    console.log(angle);
     const roseCompass = [
         { start: 10, end: 34, cardinal: 'NNE' },
         { start: 34, end: 56, cardinal: 'NE' },
@@ -22,6 +21,5 @@ export function calculateCardinalDirection(angle) {
         return (angle >= compass.start && angle < compass.end);
     });
 
-    console.log(cardinality);
     return (cardinality) ? cardinality[0].cardinal : 'N';
 }

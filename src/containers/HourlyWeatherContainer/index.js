@@ -14,7 +14,6 @@ class HourlyWeatherContainer extends React.Component {
     };
 
     render() {
-        console.log('render HourlyWeatherContainer: ', this.props);
         const { hourlyWeather } = this.props;
         return (
             (hourlyWeather) ?
