@@ -8,7 +8,8 @@ const loggerMiddleware = createLogger();
 export const initialState = {
     location: null,
     weather: {
-        isFetching: false
+        isFetching: false,
+        json: null
     }
 };
 

@@ -7,6 +7,31 @@
     height: 100vh;
 }
 
+.app-background-default {
+    background-image: url('./default-background.jpg');
+    background-size: 100vw 100vh;
+}
+
+.app-background-daylight {
+    background-image: url('./daylight-background.jpg');
+    background-size: 100vw 100vh;
+}
+
+.app-background-night {
+    background-image: url('./night-background.jpg');
+    background-size: 100vw 100vh;
+}
+
+.app-background-rainy {
+    background-image: url('./rainy-background.jpg');
+    background-size: 100vw 100vh;
+}
+
+.app-background-snow {
+    background-image: url('./snow-background.jpg');
+    background-size: 100vw 100vh;
+}
+
 .app-inner {
     display: flex;
     flex-direction: column;
@@ -15,5 +40,5 @@
 .app-weather-today {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
 }

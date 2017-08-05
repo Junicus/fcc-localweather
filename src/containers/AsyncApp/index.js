@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getLocation } from '../../actions';
 
+import CurrentWeatherContainer from '../CurrentWeatherContainer';
+import HourlyWeatherContainer from '../HourlyWeatherContainer';
 import DailyForecastContainer from '../DailyForecastContainer';
 
 import './app.css'
@@ -17,14 +19,13 @@ class AsyncApp extends React.Component {
     }
 
     render() {
+
         return (
-            <div className="app-outer">
+            <div className="app-outer app-background-default">
                 <div className="app-inner">
                     <div className="app-weather-today">
-                        <div className="app-weather-current">59</div>
-                        <div className="app-weather-hourly">57</div>
-                        <div className="app-weather-hourly">54</div>
-                        <div className="app-weather-hourly">50</div>
+                        <CurrentWeatherContainer />
+                        <HourlyWeatherContainer />
                     </div>
                     <DailyForecastContainer />
                 </div>
@@ -34,7 +35,8 @@ class AsyncApp extends React.Component {
 }
 
 function mapStateToProps(state) {
-    return state;
+    const { weather } = state;
+    return { weather };
 }
 
 export default connect(mapStateToProps)(AsyncApp);

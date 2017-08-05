@@ -5,6 +5,36 @@
     box-shadow: 2px 2px 8px 0 rgba(0,0,0,.85);
 }
 
+.daily-weather-day {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.daily-weather-icon {
+    text-align: center;
+    margin: 10px;
+}
+
+.daily-weather-summary {
+    font-size: .9em;
+}
+
+.daily-weather-precip {
+    font-size: .9em;
+}
+
+.daily-weather-wind {
+    font-size: .9em;
+}
+
+.daily-weather-lowtemp {
+    font-size: .9em;
+}
+
+.daily-weather-temp {
+    font-size: 1.5em;
+}
+
 .daily-weather-0 {
     background-color: rgba(132,152,71, .85);
 }
@@ -23,4 +53,8 @@
 
 .daily-weather-4 {
     background-color: rgba(61, 93, 164, .85);
+}
+
+.icon {
+    font-size: 4em;
 }

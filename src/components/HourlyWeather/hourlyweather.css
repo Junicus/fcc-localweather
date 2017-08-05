@@ -1,0 +1,15 @@
+.hourlyweather {
+    margin: 10px;
+}
+
+.hourlyweather-temp {
+    font-size: 1.5em;
+}
+
+.hourlyweather-time {
+    font-size: .9em;
+}
+
+.hourlyweather-precip {
+    font-size: .9em;
+}

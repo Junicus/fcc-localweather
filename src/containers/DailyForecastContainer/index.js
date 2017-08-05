@@ -5,92 +5,23 @@ import { DailyWeather } from '../../components/DailyWeather';
 import './forecast.css';
 
 class DailyForecastContainer extends React.Component {
-    render() {
-        let { weather } = this.props;
-        weather = [{
-            day: 1453363200,
-            icon: 'Icon',
-            temp: 59,
-            summary: 'Showers',
-            precip: {
-                chance: .6,
-                type: 'rain',
-            },
-            wind: {
-                speed: 4.26,
-                bearing: 150,
-            },
-            lowtemp: 48
-        }, {
-            day: 1453363200,
-            icon: 'Icon',
-            temp: 20,
-            summary: 'Snow',
-            precip: {
-                chance: .6,
-                type: 'snow',
-            },
-            wind: {
-                speed: 4.26,
-                bearing: 150,
-            },
-            lowtemp: 48
-        }, {
-            day: 1453363200,
-            icon: 'Icon',
-            temp: 59,
-            summary: 'Showers',
-            precip: {
-                chance: .6,
-                type: 'rain',
-            },
-            wind: {
-                speed: 4.26,
-                bearing: 150,
-            },
-            lowtemp: 48
-        }, {
-            day: 1453363200,
-            icon: 'Icon',
-            temp: 59,
-            summary: 'Showers',
-            precip: {
-                chance: .6,
-                type: 'rain',
-            },
-            wind: {
-                speed: 4.26,
-                bearing: 150,
-            },
-            lowtemp: 48
-        }, {
-            day: 1453363200,
-            icon: 'Icon',
-            temp: 60,
-            summary: 'Showers',
-            precip: {
-                chance: .6,
-                type: 'rain',
-            },
-            wind: {
-                speed: 4.26,
-                bearing: 150,
-            },
-            lowtemp: 48
-        }];
-
-
-        const forecastData = weather.map((forecast, i) => {
+    renderForecast(weather) {
+        return weather.map((forecast, i) => {
             return (
                 <DailyWeather key={i} {...forecast} styleId={i} />
             );
         });
+    }
+
+    render() {
+        console.log('render DailyForecastContainer', this.props);
+        const { weather } = this.props;
 
         return (
             (weather) ?
                 (<div className="forecast-container">
                     {
-                        forecastData
+                        this.renderForecast(weather)
                     }
                 </div>) : <div></div>
         );
@@ -99,7 +30,22 @@ class DailyForecastContainer extends React.Component {
 
 function mapStateToProps(state) {
     return (state.weather.json) ? {
-        weather: state.weather.json.daily.map(function (forecast) {
+        weather: state.weather.json.daily.data.filter((e, i) => { return i < 5; }).map(function (forecast) {
+            return {
+                day: new Date(forecast.time * 1000),
+                icon: forecast.icon,
+                temp: forecast.temperatureMax,
+                summary: forecast.summary,
+                precip: {
+                    chance: forecast.precipProbability,
+                    type: forecast.precipType
+                },
+                wind: {
+                    speed: forecast.windSpeed,
+                    bearing: forecast.windBearing
+                },
+                lowtemp: forecast.temperatureMin
+            };
         })
     } : { weather: null };
 }
