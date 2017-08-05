@@ -1,6 +1,16 @@
 {
-  "main.css": "static/css/main.06c3013f.css",
-  "main.css.map": "static/css/main.06c3013f.css.map",
-  "main.js": "static/js/main.9e76321b.js",
-  "main.js.map": "static/js/main.9e76321b.js.map"
+  "main.css": "static/css/main.86cad159.css",
+  "main.css.map": "static/css/main.86cad159.css.map",
+  "main.js": "static/js/main.d004aaf2.js",
+  "main.js.map": "static/js/main.d004aaf2.js.map",
+  "static\\media\\daylight-background.jpg": "static/media/daylight-background.a4f9f4cc.jpg",
+  "static\\media\\default-background.jpg": "static/media/default-background.87e25c15.jpg",
+  "static\\media\\night-background.jpg": "static/media/night-background.9e4c428d.jpg",
+  "static\\media\\rainy-background.jpg": "static/media/rainy-background.fed3cb95.jpg",
+  "static\\media\\snow-background.jpg": "static/media/snow-background.1414c30b.jpg",
+  "static\\media\\weathericons-regular-webfont.eot": "static/media/weathericons-regular-webfont.4b658767.eot",
+  "static\\media\\weathericons-regular-webfont.svg": "static/media/weathericons-regular-webfont.ecaf8b48.svg",
+  "static\\media\\weathericons-regular-webfont.ttf": "static/media/weathericons-regular-webfont.4618f0de.ttf",
+  "static\\media\\weathericons-regular-webfont.woff": "static/media/weathericons-regular-webfont.8cac70eb.woff",
+  "static\\media\\weathericons-regular-webfont.woff2": "static/media/weathericons-regular-webfont.1cd48d78.woff2"
 }
