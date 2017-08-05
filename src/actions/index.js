@@ -12,12 +12,17 @@ function requestLocation() {
 export function getLocation() {
     return (dispatch) => {
         dispatch(requestLocation());
-        //TODO: try using the geoLocation api first
-        return fetch(`http://ip-api.com/json`)
+        /*if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((position) => {
+                dispatch(getWeather(position.coords.latitude, position.coords.longitude));
+            });
+            return;
+        }*/
+        fetch(`https://freegeoip.net/json/`)
             .then(response => response.json())
             .then(json => {
                 dispatch(setLocation(json));
-                dispatch(getWeather(json.lat, json.lon));
+                dispatch(getWeather(json.latitude, json.longitude));
             }).catch(error => dispatch(setLocation(null)));
     };
 }

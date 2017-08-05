@@ -17,11 +17,11 @@ function mapStateToProps(state) {
     const { location, weather } = state;
     if (weather.json) {
         const { currently } = weather.json;
-        const { city, countryCode } = location;
+        const { city, country_code } = location;
         return {
             currentWeather: {
                 temp: currently.temperature,
-                city: city + ', ' + countryCode,
+                city: city + ', ' + country_code,
                 summary: currently.summary,
                 apparentTemp: currently.apparentTemperature
             }
