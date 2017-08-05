@@ -5,8 +5,6 @@ import './hourlyweather.css';
 
 export function HourlyWeather(props) {
     const { time, temp, precip } = props;
-    const hour = new Date(time);
-    const hourOptions = { hour: 'numeric', minute: 'numeric' };
     return (
         <div className="hourlyweather">
             <div className="hourlyweather-temp">{temp.toFixed()}&deg;</div>
