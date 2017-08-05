@@ -1,5 +1,4 @@
 export function getWeatherIcon(icon) {
-    console.log(icon);
     switch (icon) {
         case 'rain':
             return 'wi-rain';
